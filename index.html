@@ -1,0 +1,56 @@
+<html>
+  <head>
+    <title>Dummy KB</title>
+  </head>
+  <body>
+    <div class="topic-container">
+    <div class="topic-title">
+        <span id="category-name">Turning off Auto-Renewal</span>
+    </div>
+    <div class="topic-markdown">
+        <h2>Turning off auto-renewal</h2>
+      <p>If you currently have a paid subscription and you want to make sure you're not charged at the end of your term, you'll need to turn off your auto-renewal. To do this, simply visit the <a href="http://www.match.com/resign/resign.aspx?lid=108">Manage Subscription</a> section on your Account Settings page.</p>
+      <p>Click the “Cancel Subscription” link. For your security, you'll need to re-enter your password as part of this process. (Trouble signing in? <a href="https://www4.match.com/login/forgotpassword">Click here</a>.)</p>
+      <p>Next, choose a cancellation reason and click “Continue Cancellation” to proceed. This process includes several steps; before exiting the site, make sure you see a confirmation page that includes today's date and your username.</p>
+      <p>When you see the confirmation page, you’ll know that you successfully turned off auto-renewal. You will also receive an automated email to confirm that auto-renewal has been turned off for your subscription.</p>
+      <p>If you don’t see a confirmation page or if you don’t receive the automated email about your cancellation, maybe you didn’t complete the cancellation process successfully. You can always contact our Customer Care team if you need help. We can check your current subscription status and assist you with turning off auto-renewal.</p>
+      <h2>After you turn off auto-renewal</h2>
+      <p>After you turn off your auto-renewal, you can still sign in to your Match account and use your subscriber benefits. You'll be able to receive and respond to Messages from other members through the rest of your subscription period.</p>
+      <p>Once your subscription term ends, you won’t be able to receive and respond to Messages anymore, but you’ll still be able to sign in to your account. Your profile and photos will remain visible, unless you choose to manually Hide them. You’ll be able to enjoy the free member benefits, like searching for matches and sending Likes to other members.</p>
+      <p>We'll also continue to send you email notifications as long as you want to receive them and as long as your profile remains active. If you don’t want to receive emails, you can turn them off from the <a href="http://www.match.com/permissionmarketing/PM_Index.aspx?lid=108">Email Preferences</a> section on your Account Settings page.</p>
+      <h2>Removing your account</h2>
+      <p>If you simply want to Hide your profile so it’s not visible to other members, <a href="http://www.match.com/help/faq/7/124/">click here</a> for instructions.</p>
+      <p>If you want to remove your account from the site, <a href="http://www.match.com/help/faq/2/39/">click here</a>.</p>
+      <h2>Suspending a Subscription</h2>
+      <p>Currently, suspending your subscription or putting it on hold for a few months isn't a feature we provide. If you need to take a break, you can Hide your profile until you’re ready to use the site again. (When your profile is Hidden, your subscription will still renew or end on the same date. Hiding your profile does not affect your subscription.)</p>
+      <h2>iOS App</h2>
+      <p>For more information on cancelling a subscription through iTunes, <a href="https://www.match.com/help/faq/2/41/">click here</a></p>
+
+    </div>
+
+    <div class="feedback">
+        <h2 id="feedback-thanks" class="feedback-question">Was this answer helpful?</h2>
+        <div class="yesno">
+            <button class="fbbtn" id="yes" onclick="postFeedback('yes')">Yes</button>
+            <button class="fbbtn" id="no" onclick="postFeedback('no')">No</button>
+        </div>
+    </div>
+
+    <!-- script handling feedback -->
+    <script>
+        function postFeedback(yesOrNo) {
+            var url = '/help/faq/2/26/' + yesOrNo;
+            $jq.post(url, function (data) {
+                $jq('#feedback-thanks').text('Thank you for your feedback');
+                $jq('.fbbtn').attr('disabled', 'true');
+                $jq('.fbbtn').addClass('disabled');
+            });
+        }
+    </script>
+
+    <div class="return">
+        <a href="/help/faq" class="faq-button">Return to FAQ Home</a>
+    </div>
+</div>
+  </body>
+</html>
